@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Obstacle : MonoBehaviour
 {
-    PlayerController controller;
-
+    public GameObject player;
+    public GameObject obstacle;
+  
 
     // Update is called once per frame
     void Update()
@@ -14,11 +15,11 @@ public class Obstacle : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        controller = GetComponent<PlayerController>();
-        if (controller.gameObject.CompareTag("obstacle"))
+        if (other.gameObject.CompareTag("Player"))
         {
-            controller.gameObject.SetActive(false);
-            controller.speed--;
+            Debug.Log("장애물 충돌!");
+            obstacle.gameObject.SetActive(false);
+            player.GetComponent<PlayerController>().speed--;
         }
     }
 }

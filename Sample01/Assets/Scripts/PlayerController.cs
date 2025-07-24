@@ -5,14 +5,14 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
-    
-    
-  
+    private Score score;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         speed = 5;
         rb = GetComponent<Rigidbody>();
+        score = GetComponent<Score>();
         //GetComponent<T>() : 게임 오브젝트에 붙어있는 컴포넌트를
         //가져오는 기능입니다.
         //T : Type
@@ -40,12 +40,18 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        
+        
         //충돌체의 게임 오브젝트의 태그가 ItemBox라면?
-        if(other.gameObject.CompareTag("ItemBox"))
+        if (other.gameObject.CompareTag("ItemBox"))
         {
+            
             Debug.Log("아이템 획득!");
             //충돌체의 게임오브젝트를 비활성화합니다.
+            
             other.gameObject.SetActive(false);
+            
+
         }
 
        
