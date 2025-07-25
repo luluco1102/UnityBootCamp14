@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
 
     //카메라와 플레이어 사이의 변수 offset(Vector3 : 비공개)
     private Vector3 offset;
-    
+
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -22,7 +22,7 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     //Update()에서 처리할 부분을 다 처리한 후에 호출되는 위치
     //카메라 작업에서 많이 사용된다.(오브젝트 추적이 목적인 경우)
