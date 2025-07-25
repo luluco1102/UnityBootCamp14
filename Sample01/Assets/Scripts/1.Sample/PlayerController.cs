@@ -5,14 +5,22 @@ public class PlayerController : MonoBehaviour
 {
     public float speed;
     private Rigidbody rb;
+<<<<<<< HEAD:Sample01/Assets/Scripts/1.Sample/PlayerController.cs
     public Score score;
+=======
+    private Score score;
+>>>>>>> aaebf3edf6f0bce0ab647693cf4fa81be9ba7074:Sample01/Assets/Scripts/PlayerController.cs
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         speed = 5;
         rb = GetComponent<Rigidbody>();
+<<<<<<< HEAD:Sample01/Assets/Scripts/1.Sample/PlayerController.cs
         
+=======
+        score = GetComponent<Score>();
+>>>>>>> aaebf3edf6f0bce0ab647693cf4fa81be9ba7074:Sample01/Assets/Scripts/PlayerController.cs
         //GetComponent<T>() : 게임 오브젝트에 붙어있는 컴포넌트를
         //가져오는 기능입니다.
         //T : Type
@@ -40,17 +48,28 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+<<<<<<< HEAD:Sample01/Assets/Scripts/1.Sample/PlayerController.cs
 
 
+=======
+        
+        
+>>>>>>> aaebf3edf6f0bce0ab647693cf4fa81be9ba7074:Sample01/Assets/Scripts/PlayerController.cs
         //충돌체의 게임 오브젝트의 태그가 ItemBox라면?
         if (other.gameObject.CompareTag("ItemBox"))
         {
             
             Debug.Log("아이템 획득!");
             //충돌체의 게임오브젝트를 비활성화합니다.
+<<<<<<< HEAD:Sample01/Assets/Scripts/1.Sample/PlayerController.cs
 
             other.gameObject.SetActive(false);
             score.GetComponent<Score>().point += 10;
+=======
+            
+            other.gameObject.SetActive(false);
+            
+>>>>>>> aaebf3edf6f0bce0ab647693cf4fa81be9ba7074:Sample01/Assets/Scripts/PlayerController.cs
 
         }
 
